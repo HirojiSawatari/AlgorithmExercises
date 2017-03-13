@@ -23,47 +23,47 @@ int calculate(int n,int r,int avg){
 	long time=0;
 	//输入（平时成绩a，每多拿一分所需时间b） 
 	for(i=0;i<n;i++){
-	    scanf("%d %d",&a[i],&b[i]);
+		scanf("%d %d",&a[i],&b[i]);
 	}
 	//计算各科达到满分时所需时间，以及现在所得分之和
 	for(i=0;i<n;i++){	
-	    count+=a[i];
-	    fulltime[i]=(r-a[i])*b[i];
+		count+=a[i];
+		fulltime[i]=(r-a[i])*b[i];
 	}
 	//若现在所得分已超过平均分即可不复习 
 	if(count<(avg*n)){
 		//按照每得一分所需时间从小到大排序（同时按此顺序排序a平时成绩,b每得到一分所需时间数组）（不应该以得到满分所需时间排序） 
 		for(i=0;i<n-1;i++){
-		    for(j=0;j<n-1-i;j++){	
-		        if(b[j]>b[j+1]){	//一分耗时较小者往前移 
-		            temp=fulltime[j+1];
-		            fulltime[j+1]=fulltime[j];
-		            fulltime[j]=temp;	
-		            temp=a[j+1];
-	    	        a[j+1]=a[j];
-	        	    a[j]=temp;
-	            	temp=b[j+1];
-	            	b[j+1]=b[j];
-	            	b[j]=temp;
-	        	}
-	    	}
+			for(j=0;j<n-1-i;j++){	
+				if(b[j]>b[j+1]){	//一分耗时较小者往前移 
+					temp=fulltime[j+1];
+					fulltime[j+1]=fulltime[j];
+					fulltime[j]=temp;	
+					temp=a[j+1];
+					a[j+1]=a[j];
+					a[j]=temp;
+					temp=b[j+1];
+					b[j+1]=b[j];
+					b[j]=temp;
+				}
+			}
 		}
 		//计算还需分数
 		long needpoint,curpoint;
 		needpoint=(avg*n)-count;
 		for(i=0;i<n;i++){
-		    //该课满分后还需得到的分数
-		    curpoint=needpoint-(r-a[i]);
-		    //此课程满分后超出应得平均分
-		    if(curpoint<0){
-		        time+=(needpoint*b[i]);
-		        break;
-		    }
-		    //此课程满分仍然达不到平均分
-		    else{
-		        time+=fulltime[i];
-		    }
-		    needpoint=curpoint;
+			//该课满分后还需得到的分数
+			curpoint=needpoint-(r-a[i]);
+			//此课程满分后超出应得平均分
+			if(curpoint<0){
+				time+=(needpoint*b[i]);
+				break;
+			}
+			//此课程满分仍然达不到平均分
+			else{
+				time+=fulltime[i];
+			}
+			needpoint=curpoint;
 		}
 	}
 	printf("%ld\n",time);	
