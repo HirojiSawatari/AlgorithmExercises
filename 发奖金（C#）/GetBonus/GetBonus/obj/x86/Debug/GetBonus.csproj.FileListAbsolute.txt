@@ -1,0 +1,4 @@
+E:\GitHub\AlgorithmExercises\发奖金（C#）\GetBonus\GetBonus\bin\Debug\GetBonus.exe
+E:\GitHub\AlgorithmExercises\发奖金（C#）\GetBonus\GetBonus\bin\Debug\GetBonus.pdb
+E:\GitHub\AlgorithmExercises\发奖金（C#）\GetBonus\GetBonus\obj\x86\Debug\GetBonus.exe
+E:\GitHub\AlgorithmExercises\发奖金（C#）\GetBonus\GetBonus\obj\x86\Debug\GetBonus.pdb
