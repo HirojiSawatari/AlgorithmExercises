@@ -1,0 +1,5 @@
+E:\GitHub\AlgorithmExercises\股票交易日（C#）\Stock\Stock\bin\Debug\Stock.exe
+E:\GitHub\AlgorithmExercises\股票交易日（C#）\Stock\Stock\bin\Debug\Stock.pdb
+E:\GitHub\AlgorithmExercises\股票交易日（C#）\Stock\Stock\obj\x86\Debug\Stock.exe
+E:\GitHub\AlgorithmExercises\股票交易日（C#）\Stock\Stock\obj\x86\Debug\Stock.pdb
+E:\GitHub\AlgorithmExercises\股票交易日（C#）\Stock\Stock\obj\x86\Debug\Stock.csprojResolveAssemblyReference.cache
